@@ -18,7 +18,7 @@ app.use(cookieParser());
 
 app.use("/api/auth", authRoutes) 
 app.use("/api/message", messageRoutes) 
-app.use("/api/user", userRoutes) 
+app.use("/api/users", userRoutes) 
 
 // app.get('/', (req, res) => {
 //     // root route http://localhost:5000/
