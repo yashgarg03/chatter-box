@@ -6,7 +6,6 @@ export const login = async (req, res) => {
     try {
         const { username, password } = req.body;
         const user = await User.findOne({ username });
-        console.log(user);
         const isPasswordCorrect = await bcrypt.compare(password, user?.password || "");
 
         if (!user || !isPasswordCorrect) {
@@ -32,7 +31,6 @@ export const login = async (req, res) => {
 export const signup = async (req, res) => {
     try {
         const { fullName, username, password, confirmPassword, gender } = req.body;
-        console.log(req.body);
         if (password !== confirmPassword) {
             return res.status(400).json({ error: 'Passwords do not match' });
         }
