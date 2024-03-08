@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:8000',
+        target: 'https://chatter-box-eosin.vercel.app/',
         changeOrigin: true
       }
     }
